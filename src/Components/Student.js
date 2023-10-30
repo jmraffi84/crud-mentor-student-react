@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from '../Base/Base'
 import { useNavigate } from 'react-router-dom';
-import { Button } from '@mui/material';
+import { Button, Paper } from '@mui/material';
 const Student = ({ students, setStudents }) => {
     const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ const Student = ({ students, setStudents }) => {
             <div className='stud-collection'>
                 {
                     students.map((stud, idx) => (
-                        <div className='stud-card' key={idx}>
+                        <Paper elevation={6} className='stud-card' key={idx}>
                             <h2>{stud.name}</h2>
                             <p>Batch : {stud.batch}</p>
                             <p>Gender : {stud.gender}</p>
@@ -42,7 +42,7 @@ const Student = ({ students, setStudents }) => {
 
 
                             </div>
-                        </div>
+                        </Paper>
                     ))
                 }
             </div>
