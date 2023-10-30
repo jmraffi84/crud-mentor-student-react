@@ -1,38 +1,96 @@
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(8, 33, 74);
+  color: whitesmoke;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.main-container {
+  margin: 27px;
+
+}
+
+.nav-btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+
+.stud-collection {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stud-card {
+  background-color: rgb(21, 53, 161);
+  width: 200px;
+  height: 250px;
+  box-shadow: -2px 2px 2px rgb(40, 98, 191);
+  border-radius: 12px;
+}
+
+.card-btn-group {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-btn-group>button {
+  padding: 5px;
+  width: 55px;
+  border-radius: 5px;
+  border: none;
+
+}
+
+.card-btn-group>button:hover {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  padding: 7px;
+  width: 80%;
+  margin: 5px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 2px;
+  background-color: rgb(162, 182, 245);
+  height: fit-content;
+}
+
+/* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); */
+
+
+.sudent-submit {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.sudent-submit:hover {
+  background-color: green;
+  color: white;
 }
