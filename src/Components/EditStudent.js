@@ -24,12 +24,10 @@ const EditStudent = ({ students, setStudents, studId }) => {
             onSubmit: (updatedStudent) => {
                 // handleAddStudent(updatedStudent)
                 console.log(updatedStudent);
-                updatedStudent(updatedStudent);
+                editStudent(updatedStudent);
 
             }
         })
-
-
 
     const navigate = useNavigate()
     // const [idx, setIdx] = useState("")
@@ -37,8 +35,6 @@ const EditStudent = ({ students, setStudents, studId }) => {
     // const [batch, setBatch] = useState("")
     // const [gender, setGender] = useState("")
     // const [education, setEducation] = useState("")
-
-
 
     // useEffect(() => {
 
@@ -58,14 +54,14 @@ const EditStudent = ({ students, setStudents, studId }) => {
             //     id, name, batch, gender, education
             // }
             // fetch and update data
-            const respose = await fetch(`https://653f4a8a9e8bd3be29e02d3f.mockapi.io/students/${id}`, {
+            const response = await fetch(`https://653f4a8a9e8bd3be29e02d3f.mockapi.io/students/${id}`, {
                 method: "PUT",
                 body: JSON.stringify(updatedStudent),
                 headers: {
                     "Content-Type": "application/json"
                 }
             });
-            const data = await respose.json()
+            const data = await response.json()
             const studIndex = students.findIndex((stud) => stud.id === id);
 
             students[studIndex] = data

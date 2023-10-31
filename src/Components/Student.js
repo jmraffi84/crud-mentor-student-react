@@ -2,18 +2,22 @@ import React from 'react'
 import Base from '../Base/Base'
 import { useNavigate } from 'react-router-dom';
 import { Button, Paper } from '@mui/material';
+
+
 const Student = ({ students, setStudents }) => {
     const navigate = useNavigate();
 
     const deleteStudent = async (studentId) => {
         try {
-            const res = fetch(`https://653f4a8a9e8bd3be29e02d3f.mockapi.io/students/${studentId}`, {
+            const res = await fetch(`https://653f4a8a9e8bd3be29e02d3f.mockapi.io/students/${studentId}`, {
                 method: "DELETE"
-
             });
-            const data = (await res).json()
-            const removeStudent = students.filter(student => student.id !== studentId);
-            setStudents(removeStudent)
+            const data = await res.json()
+            console.log(data);
+            if (data) {
+                const removeStudent = students.filter(student => student.id !== studentId);
+                setStudents(removeStudent)
+            }
 
         } catch (error) {
             console.log(error);

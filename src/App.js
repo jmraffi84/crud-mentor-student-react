@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Student from './Components/Student';
-import { data } from './Data/data';
 import { Routes, Route } from 'react-router-dom';
 import AddStudent from './Components/AddStudent';
 import EditStudent from './Components/EditStudent';

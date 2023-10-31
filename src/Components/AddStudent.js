@@ -13,6 +13,7 @@ export const studentValidationSchema = yup.object({
 })
 
 const AddStudent = ({ students, setStudents }) => {
+    const navigate = useNavigate()
 
     const { values, handleChange, handleSubmit, handleBlur, errors, touched } = useFormik({
         initialValues: {
@@ -31,7 +32,6 @@ const AddStudent = ({ students, setStudents }) => {
     // const [batch, setBatch] = useState("")
     // const [gender, setGender] = useState("")
     // const [education, setEducation] = useState("")
-    const navigate = useNavigate()
     const handleAddStudent = async (newStudent) => {
 
         // const newStudent = {

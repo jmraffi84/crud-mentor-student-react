@@ -1,4 +1,4 @@
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, IconButton, Toolbar } from '@mui/material';
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 function Base({ title, description, children }) {
